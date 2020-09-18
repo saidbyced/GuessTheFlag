@@ -60,13 +60,37 @@
 			children = (
 				AE3C71942514E4EC004674B5 /* AppDelegate.swift */,
 				AE3C71962514E4EC004674B5 /* SceneDelegate.swift */,
-				AE3C71982514E4EC004674B5 /* ViewController.swift */,
-				AE3C719A2514E4EC004674B5 /* Main.storyboard */,
+				AE3C71AC2514E6F0004674B5 /* Models */,
+				AE3C71AB2514E6E7004674B5 /* Controllers */,
+				AE3C71AA2514E6B1004674B5 /* Views */,
 				AE3C719D2514E4F7004674B5 /* Assets.xcassets */,
-				AE3C719F2514E4F7004674B5 /* LaunchScreen.storyboard */,
 				AE3C71A22514E4F7004674B5 /* Info.plist */,
 			);
 			path = "Guess the Flag";
+			sourceTree = "<group>";
+		};
+		AE3C71AA2514E6B1004674B5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE3C719A2514E4EC004674B5 /* Main.storyboard */,
+				AE3C719F2514E4F7004674B5 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AE3C71AB2514E6E7004674B5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AE3C71982514E4EC004674B5 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AE3C71AC2514E6F0004674B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
