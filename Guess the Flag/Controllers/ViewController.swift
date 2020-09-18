@@ -42,8 +42,6 @@ class ViewController: UIViewController {
         button3.layer.borderColor = UIColor.lightGray.cgColor
         
         askQuestion()
-        
-        
     }
     
     func askQuestion(_ action: UIAlertAction! = nil) {
@@ -57,16 +55,26 @@ class ViewController: UIViewController {
     }
     @IBAction func buttonTapped(_ sender: UIButton) {
         var title: String
+        var message: String
+        var correctCountry: String {
+            if countries[correctAnswer].count < 3 {
+                return countries[correctAnswer].uppercased()
+            } else {
+                return countries[correctAnswer].capitalized
+            }
+        }
         
         if sender.tag == correctAnswer {
             title = "Correct"
+            message = "Well done! That was the flag of \(correctCountry)!"
             score += 1
         } else {
             title = "Wrong"
+            message = "Sorry, that’s the flag of \(correctCountry)"
             score -= 1
         }
         
-        let ac = UIAlertController(title: title, message: "Your score is \(score).", preferredStyle: .alert)
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
         present(ac, animated: true)
     }
