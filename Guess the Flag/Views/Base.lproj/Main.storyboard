@@ -16,29 +16,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="az1-JV-oSY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="az1-JV-oSY">
                                 <rect key="frame" x="107" y="100" width="200" height="100"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kjf-Fk-hYR"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wsl-7V-QuB">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wsl-7V-QuB">
                                 <rect key="frame" x="107" y="230" width="200" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n6Y-b8-lmL"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keG-bH-P1U">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keG-bH-P1U">
                                 <rect key="frame" x="107" y="360" width="200" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bIF-Oz-nJy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="az1-JV-oSY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="00h-0z-TcB"/>
+                            <constraint firstItem="keG-bH-P1U" firstAttribute="top" secondItem="Wsl-7V-QuB" secondAttribute="bottom" constant="30" id="2wa-9h-HC5"/>
+                            <constraint firstItem="Wsl-7V-QuB" firstAttribute="top" secondItem="az1-JV-oSY" secondAttribute="bottom" constant="30" id="AOy-Vo-vqG"/>
+                            <constraint firstItem="keG-bH-P1U" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SrJ-4G-ybj"/>
                             <constraint firstItem="az1-JV-oSY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="VsK-Ie-lya"/>
+                            <constraint firstItem="Wsl-7V-QuB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Zhf-74-c2S"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="67m-LF-JJU"/>
+                    <connections>
+                        <outlet property="button1" destination="az1-JV-oSY" id="Ujl-WB-d11"/>
+                        <outlet property="button2" destination="Wsl-7V-QuB" id="XbO-IN-fbY"/>
+                        <outlet property="button3" destination="keG-bH-P1U" id="whS-1G-PFT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,6 +80,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="us" width="200" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
